@@ -571,7 +571,7 @@
 				
 			} else {
 
-			// ELSE CHECK EACH TARGET ELEMENT FOR ANY FILTER CATEGORY:
+			// ELSE CHECK EACH TARGET ELEMENT FOR ANY data-filter CATEGORY:
 			
 				$targets.each(function(){
 					var $t = $(this);
