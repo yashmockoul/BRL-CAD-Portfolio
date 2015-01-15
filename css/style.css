@@ -409,6 +409,12 @@ ul.portfolio li {
 	display: none;
 	opacity: 0;
 }
+ul.portfolio2 li {
+	width: 20%;
+	float: left;
+	display: none;
+	opacity: 0;
+}
 .portfolioitem {
 	display: block;
 	padding-bottom: 85px;

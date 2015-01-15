@@ -1,0 +1,42 @@
+.logo{
+margin-left: 40px;
+}.os{
+ height: 225px;
+    background-color: grey;
+    width: 225px;
+    opacity: 0.6;
+     filter: alpha(opacity=60);
+}
+div.os h1 {
+    text-align: center;
+    padding-top: 75px;
+    font-weight: bold;
+    color: #000000;
+}
+div.os img {
+    right: 50px;
+    padding-left: 95px;
+    font-weight: bold;
+    color: #000000;
+}
+#linux{
+    height: 225px;
+    width: 225px;
+background-image: url('../img/linux_tux.jpg');
+}
+#macos{
+  height: 225px;
+    width: 225px;
+background-image: url('../img/109.png');
+}#windows{
+ height: 225px;
+    width: 225px;
+background-image: url('../img/descarga%20(1).jpg');
+    
+}#solaris{
+
+}
+.col-lg-4{
+margin-top: 20px;
+text-align: center;
+}

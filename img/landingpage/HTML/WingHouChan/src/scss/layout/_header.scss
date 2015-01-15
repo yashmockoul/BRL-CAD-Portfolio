@@ -1,0 +1,43 @@
+// Header
+// _header.scss
+
+// Global styles for the header
+
+@import "../utils/config";
+@import "../utils/functions";
+@import "../utils/media-queries";
+@import "../utils/mixins";
+@import "grid";
+@import "../components/buttons";
+
+header.global {
+  background-color: rgba(26,26,26,.9);
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+
+  > div {
+    @include grid-row();
+    padding: 0 rem-calc(20);
+
+    img {
+      height: rem-calc(70);
+      width: auto;
+    }
+
+    a {
+
+      &.menu-toggle {
+        float: right;
+        font-family: "Oswald";
+        font-size: 1.25rem;
+        text-decoration: none;
+        margin-top: rem-calc(25);
+
+        i {
+          margin-left: rem-calc(5);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+// Footer
+// _footer.scss
+
+// Global styles for the footer
+
+@import "../utils/config";
+@import "../utils/functions";
+@import "../utils/media-queries";
+@import "../utils/mixins";
+@import "grid";
+@import "../components/buttons";
+
+footer.global {
+  width: 100%;
+
+  #footer-top {
+    background-color: #333;
+    padding: rem-calc(20) 0;
+    width: 100%;
+
+    #footer-links {
+      @include grid-row();
+
+      > div {
+        @include grid-row();
+
+        > div:first-of-type {
+          @include grid-column(12);
+          text-align: center;
+
+          @media #{$medium-up} {
+            @include grid-column(4);
+          }
+
+          a {
+            
+            @media #{$medium-up} {  
+              display: inline-block;
+            }
+
+            &:first-of-type {
+              position: relative;
+              top: rem-calc(5);
+            }
+
+            &:last-of-type {
+            font-size: 2rem;
+            font-family: "Oswald";
+
+            @media #{$medium-up} {
+              position: relative;
+              top: rem-calc(-15);
+              left: rem-calc(10);
+            }
+
+              &:hover {
+                color: $white;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        > div:last-of-type {
+          @include grid-column(12);
+
+          @media #{$medium-up} {
+            @include grid-column(8);
+          }
+
+          ul {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+            top: rem-calc(10);
+
+            @media #{$medium-up} {
+              float: right;
+            }
+
+            li {
+              font-size: rem-calc(15);
+              font-weight: 600;
+              text-align: center;
+
+              @media #{$medium-up} {
+                float: left;
+                margin: 0 rem-calc(10);
+                text-align: left;
+              }
+
+              a {
+                color: $light-maroon;
+                text-decoration: none;
+
+                &:hover {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #footer-bottom {
+    background-color: $black;
+    width: 100%;
+
+    > div {
+      @include grid-row();
+
+      > div:first-of-type {
+        @include grid-column(12);
+
+        @media #{$medium-up} {
+          @include grid-column($columns: 5, $push: 7);
+        }
+
+        ul {
+          list-style-type: none;
+          margin-bottom: 0;
+          padding: 0;
+
+          @media #{$medium-up} {
+            float: right;
+            margin-top: rem-calc(14)
+          }
+
+          li {
+            font-size: rem-calc(13);
+            text-align: center;
+            margin: 0 rem-calc(10);
+
+            @media #{$medium-up} {
+              float: left;
+              text-align: left;
+            }
+
+            a {
+              color: $gray;
+              text-decoration: none;
+
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+
+      > div:last-of-type {
+        @include grid-column(12);
+
+        @media #{$medium-up} {
+          @include grid-column($columns: 7, $pull: 5);
+        }
+
+        p {
+          color: $gray;
+          font-size: rem-calc(13);
+          text-align: center;
+
+          @media #{$medium-up} {
+            text-align: left;
+          }
+
+          a {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

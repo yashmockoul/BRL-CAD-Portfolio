@@ -1,0 +1,17 @@
+$(document).ready(function(){
+    $("#grid-gallery01").hide();
+    $("#grid-gallery02").hide();
+    $("#grid-gallery03").hide();
+$("#gal1").click(function(){
+$(".gal").hide();
+$("#grid-gallery01").show();
+});
+    $("#gal2").click(function(){
+$(".gal").hide();
+$("#grid-gallery02").show();
+});
+    $("#gal3").click(function(){
+$(".gal").hide();
+$("#grid-gallery03").show();
+});
+});

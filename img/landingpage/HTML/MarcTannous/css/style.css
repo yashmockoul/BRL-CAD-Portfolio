@@ -1,0 +1,146 @@
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background: #fff;
+	color: #383a3c;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.25;
+	font-family: 'Raleway', Calibri, Arial, sans-serif;
+}
+
+a, button {
+	outline: none;
+}
+
+a {
+	color: #566473;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #34495e;
+}
+
+section {
+	padding: 1em;
+	text-align: center;
+}
+
+p.ref {
+	text-align: center;
+	padding: 2em 1em;
+}
+
+/* Header */
+.-header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+	max-width: 900px;
+}
+
+.-header h1 {
+	margin: 0;
+	font-size: 4.5em;
+	line-height: 1;
+	font-weight: 200;
+    
+}
+
+.-header h1 span {
+	display: block;
+	padding: 1em 0 1.5em;
+	font-size: 36%;
+	color: #95a5a6;
+	line-height: 1.4;
+}
+.-header h2 {
+    color: #d91b5b;
+    display: inline-block;
+	float: left;
+	font-size: 2.5em;
+	line-height: 1;
+	font-weight: 200;
+}
+.-header h2l {
+    color: #d91b5b;
+    display: inline-block;
+	float: left;
+	font-size: 2.5em;
+	line-height: 1;
+	font-weight: 200;
+}
+.-header h2r {
+    color: #d91b5b;
+    display: inline-block;
+	float: right;
+	font-size: 2.5em;
+	line-height: 1;
+	font-weight: 200;
+}
+.-header p {
+    display: inline-block;
+    text-align: left;
+}
+.-header pr {
+    display: inline-block;
+    text-align: right;
+}
+.button-left {
+  position: relative;
+  vertical-align: top;
+  width: 10em;
+  height: 45px;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #d91b5b;
+  border: 0;
+  border-bottom: 2px solid #d91b5b;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d91b5b;
+  box-shadow: inset 0 -2px #d91b5b;
+}
+.button-left:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.button-right {
+  float:right;
+  position: relative;
+  vertical-align: top;
+  width: 10em;
+  height: 45px;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #d91b5b;
+  border: 0;
+  border-bottom: 2px solid #d91b5b;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d91b5b;
+  box-shadow: inset 0 -2px #d91b5b;
+}
+.button-right:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+
+

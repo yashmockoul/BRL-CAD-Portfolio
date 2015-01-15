@@ -1,0 +1,175 @@
+// Grid
+// _grid.scss
+
+// SCSS for our grid
+
+// This grid is based on the grid in the Foundation front-end framework by ZURB (http://foundation.zurb.com/)
+
+@import "../utils/config";
+@import "../utils/functions";
+@import "../utils/mixins";
+
+// Grid config
+$grid-row-width: rem-calc(1000);
+$grid-total-columns: 12;
+$grid-column-gutter: rem-calc(30);
+
+// Grid-calc
+// Function that calculates the percentage width of a column
+@function grid-calc($column-number, $grid-total-columns) {
+  @return percentage(($column-number / $grid-total-columns));
+}
+
+// Grid-row
+// Mixin for creating rows
+//
+// Config
+//   $behavior: Specify behaviour of row
+//     Default: false
+//     Type: Boolean, String
+//     Possible values:
+//       nest: For a row inside a row
+//       collapse: For a collapsed row, where margins are 0
+//       nest-collapse: For a collapsed row inside a row
+//       false: Normal behaviour
+//
+@mixin grid-row($behavior: false) {
+
+  // Use @include grid-row(nest) to include a nested row
+  @if $behavior == nest {
+    width: auto;
+    margin-#{$default-float}: -($grid-column-gutter/2);
+    margin-#{$opposite-direction}: -($grid-column-gutter/2);
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+  // Use @include grid-row(collapse) to collapse a container row margins
+  @else if $behavior == collapse {
+    width: 100%;
+    margin: 0;
+    max-width: $grid-row-width;
+  }
+
+  // Use @include grid-row(nest-collapse) to collapse outer margins on a nested row
+  @else if $behavior == nest-collapse {
+    width: auto;
+    margin: 0;
+    max-width: none;
+  }
+
+  // Use @include grid-row to use a normal container row
+  @else {
+    width: 100%;
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: $grid-row-width;
+  }
+
+  // Clearfix for all rows
+  @include clearfix();
+}
+
+// Grid-column
+// Mixin for creating columns
+//
+// Config
+//   $columns: The number of columns that should be created.
+//     Type: Integer
+//   $last-column: Specify if column is the last column in the row. Default: false.
+//     Type: Boolean
+//   $center: Specify if column should be centered.
+//     Type: Boolean
+//   $offset: Specify number of columns that this column should be offset by.
+//     Type: Integer
+//   $push: Specify number of columns that this column should be pushed to the right by.
+//     Type: Integer
+//   $pull: Specify number of columns that this column should be pulled to the left by.
+//     Type: Integer
+//   $collapse: Specify if column should have gutters removed.
+//     Default: false
+//     Type: Boolean
+//   $float: Specify if column should be floated.
+//     Default: true
+//     Type: Boolean, String
+//     Possible values:
+//       true: Float column in default direction.
+//       false: Column not floated
+//       left: Float column left
+//       right: Float column right
+//
+@mixin grid-column(
+  $columns:false,
+  $last-column:false,
+  $center:false,
+  $offset:false,
+  $push:false,
+  $pull:false,
+  $collapse:false,
+  $float:true,
+  $position:false) {
+
+  // If positioned for default .column, include relative position
+  // push and pull require position set
+  @if $position or $push or $pull {
+    position: relative;
+  }
+
+  // If collapsed, get rid of gutter padding
+  @if $collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Gutter padding whenever a column isn't set to collapse
+  // (use $collapse:null to do nothing)
+  @else if $collapse == false {
+    padding-left: $grid-column-gutter / 2;
+    padding-right: $grid-column-gutter / 2;
+  }
+
+  // If a column number is given, calculate width
+  @if $columns {
+    width: grid-calc($columns, $grid-total-columns);
+
+    // If last column, float naturally instead of to the right
+    @if $last-column { float: $opposite-direction; }
+  }
+
+  // Source Ordering, adds left/right depending on which you use.
+  @if $push {
+    #{$default-float}: grid-calc($push, $grid-total-columns);
+    #{$opposite-direction}: auto;
+  }
+  @if $pull {
+    #{$opposite-direction}: grid-calc($pull, $grid-total-columns);
+    #{$default-float}: auto;
+  }
+
+  @if $float {
+    @if $float == left or $float == true {
+      float: $default-float;
+    }
+    @else if $float == right {
+      float: $opposite-direction;
+    }
+    @else {
+      float: none;
+    }
+  }
+
+  // If centered, get rid of float and add appropriate margins
+  @if $center {
+    margin-#{$default-float}: auto;
+    margin-#{$opposite-direction}: auto;
+    float: none;
+  }
+
+  // If offset, calculate appropriate margins
+  @if $offset {
+    margin-#{$default-float}: grid-calc($offset, $grid-total-columns) !important;
+  }
+}

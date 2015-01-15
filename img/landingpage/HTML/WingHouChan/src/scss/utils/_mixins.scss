@@ -1,0 +1,131 @@
+// Mixins
+// _mixins.scss
+
+// File for placing mixins that are not specific to any component
+
+// Box-shadow
+// Used to add box-shadow across browser prefixes
+@mixin box-shadow($value) {
+  -webkit-box-shadow: #{$value};
+  -moz-box-shadow: #{$value};
+  box-shadow: #{$value};
+}
+
+// Box-sizing
+// Used to add box-sizing across browser prefixes
+@mixin box-sizing($value: border-box) {
+  -webkit-box-sizing: #{$value};
+  -moz-box-sizing: #{$value};
+  box-sizing: #{$value};
+}
+
+// Clearfix
+// Used to clear floats
+@mixin clearfix() {
+  &::before, &::after {
+    content: " ";
+    display: table; }
+  &::after {
+    clear: both;
+  }
+}
+
+// Import Once
+// Used to prevent styles from being loaded multiple times for compenents that rely on other components.
+$modules: () !default;
+@mixin exports($name) {
+  @if (index($modules, $name) == false) {
+    $modules: append($modules, $name);
+    @content;
+  }
+}
+
+// Intrinsic and Extrinsic Sizing
+// Used to add vendor prefixes for values for intrinsic and extrinsic sizing
+//
+// Notes
+//   CSS Intrinsic & Extrinsic Sizing is currently a W3C working draft.
+//   Use with caution
+//   Link to specification: http://www.w3.org/TR/css3-sizing/
+//   Link to browser support statistics: http://caniuse.com/#feat=intrinsic-width
+//
+// Config
+//   $property: CSS property to which sizing value is assigned to
+//     Type: String
+//   $value: Specify intrinsic/extrinsic sizing value
+//     Type: String
+//
+@mixin sizing($property, $value) {
+  @if $property == height {
+    height: -webkit-#{$value};
+    height: -moz-#{$value};
+    height: $value;
+  }
+
+  @else if $property == width {
+    width: -webkit-#{$value};
+    width: -moz-#{$value};
+    width: $value;
+  }
+
+  @else if $property == min-height {
+    min-height: -webkit-#{$value};
+    min-height: -moz-#{$value};
+    min-height: $value;
+  }
+
+  @else if $property == min-width {
+    min-width: -webkit-#{$value};
+    min-width: -moz-#{$value};
+    min-width: $value;
+  }
+
+  @else if $property == max-height {
+    max-height: -webkit-#{$value};
+    max-height: -moz-#{$value};
+    max-height: $value;
+  }
+
+  @else if $property == max-width {
+    max-width: -webkit-#{$value};
+    max-width: -moz-#{$value};
+    max-width: $value;
+  }
+
+  @else if $property == column-width {
+    column-width: -webkit-#{$value};
+    column-width: -moz-#{$value};
+    column-width: $value;
+  }
+
+  @else {
+    @error "$property value of intrinsic/extrinsic sizing mixin not entered or invalid."
+  }
+}
+
+// Transform
+// Used to add vendor prefixes for the transform property
+//
+// Config
+//   $value: Specify transform value
+//     Type: String
+//
+@mixin transform($value) {
+  -webkit-transform: #{$value};
+  -ms-transform: #{$value};
+  transform: #{$value};
+}
+
+// Transform-origin
+// Used to add vendor prefixes for the transform-origin property
+//
+// Config
+//   $value: Specify the transform-origin value
+//     Type: String
+//
+@mixin transform-origin($value) {
+  -webkit-transform: #{$value};
+  -ms-transform-origin: #{$value};
+  -moz-transform-origin: #{$value};
+  transform-origin: #{$value};
+}

@@ -1,0 +1,286 @@
+
+@import "../utils/config";
+@import "../utils/functions";
+@import "../utils/media-queries";
+@import "../utils/mixins";
+@import "../layout/grid";
+@import "../components/buttons";
+
+#index {
+
+  #landing {
+    $breakpoint: "(min-width: 53em)";
+    $quick-action-bar-height: 275;
+
+    background-color: $black;
+    position: relative;
+    min-height: 40em;
+    height: calc(100% + #{$quick-action-bar-height}px);
+    width: 100%;
+
+    @media #{$screen} and #{$breakpoint} {
+      height: 100%;
+    }
+
+    > div:first-of-type {
+      @include grid-row();
+      padding: 0 rem-calc(10);
+      position: relative;
+      top: 10%;
+
+      @media #{$screen} and #{$breakpoint} {
+        top: 30%;
+      }
+
+      h1 {
+        color: $maroon;
+        font-family: "Oswald";
+        font-size: 17.5vw;
+        margin: 0;
+
+        @media #{$screen} and #{$breakpoint} {
+          font-size: 7rem;
+        }
+      }
+
+      h2 {
+        color: $white;
+        font-weight: 300;
+        font-size: 7.5vw;
+        margin: 0;
+
+        @media #{$screen} and #{$breakpoint} {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    #quick-action-bar {
+      background-color: $light-maroon;
+      color: $white;
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: rem-calc($quick-action-bar-height);
+      width: 100%;
+
+      @media #{$screen} and #{$breakpoint} {
+        max-height: rem-calc(75);
+      }
+
+      > div {
+        @include grid-row();
+        padding: 0 rem-calc(20);
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+
+          li {
+
+            @media #{$screen} and #{$breakpoint} {
+              float: left;
+
+              &:nth-of-type(2), &:last-of-type {
+                float: right;
+              }
+            }
+
+            p {
+              font-size: rem-calc(20);
+              margin-top: rem-calc(25);
+              
+              @media #{$screen} and #{$breakpoint} {
+                float: left;
+              }
+            }
+
+            a {
+              @include round-button(
+                $background-color: transparent,
+                $background-color-hover: $white,
+                $text-color: $white,
+                $text-color-hover: $maroon,
+                $border-color: $white,
+                $width: rem-calc(210));
+              font-family: "Oswald";
+              margin: rem-calc(10) rem-calc(10);
+              
+              @media #{$screen} and #{$breakpoint} {
+                float: right;
+              }
+
+              i {
+                margin-right: rem-calc(15);
+                position: relative;
+                top: rem-calc(2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #features, #oss, #est {
+    background-color: $black;
+    height: auto;
+    width: 100%;
+
+    @media #{$medium-up} {
+      min-height: 43.75em;
+      height: 100%;
+    }
+
+    > div {
+      @include grid-row();
+      height: 100%;
+      position: relative;
+
+      .content-panel {
+        @include grid-column(12);
+        background-color: $white;
+        padding: rem-calc(20) rem-calc(30);
+        height: auto;
+
+        @media #{$medium-up} {
+          @include grid-column(6);
+          position: absolute;
+          bottom: 0;
+          height: 100%;
+          padding: rem-calc(30);
+        }
+
+        @media #{$large-up} {
+          @include grid-column(5);
+          padding: rem-calc(50) rem-calc(30);
+        } 
+
+        h2 {
+          color: $maroon;
+          font-size: 10svw;
+          font-weight: 400;
+          margin: 0 0 rem-calc(16) 0;
+
+          @media #{$medium-up} {
+            font-size: 3rem;
+            line-height: 3.25rem;
+          }
+        }
+
+        h3 {
+          color: $gray;
+          font-size: 1.25rem;
+          font-weight: 300;
+        }
+
+        a {
+          @include round-button(
+            $background-color: $maroon,
+            $background-color-hover: $dark-maroon,
+            $text-color: $white);
+
+          font-size: 1.5rem;
+          font-family: "Oswald";
+        }
+      }
+    }
+  }
+
+  #oss {
+
+    .content-panel {
+
+      @media #{$medium-up} {
+        text-align: right;
+        right: 0;
+      }
+    }
+  }
+
+  #cta {
+    padding: rem-calc(100) 0;
+
+    div {
+      @include grid-row();
+
+      a {
+        @include round-button(
+          $background-color: $maroon,
+          $background-color-hover: $dark-maroon,
+          $text-color: $white);
+        display: block;
+        font-family: "Oswald";
+        font-size: 2rem;
+        text-align: center;
+        margin: 0 auto;
+        line-height: rem-calc(60);
+        height: rem-calc(75);
+        width: rem-calc(250);
+
+        i {
+          font-size: 2rem;
+          margin-right: rem-calc(15);
+          position: relative;
+          top: rem-calc(4);
+        }
+      }
+
+      p {
+        color: $gray;
+        font-size: rem-calc(15);
+        text-align: center;
+      }
+    }
+  }
+
+  #blog {
+
+    div {
+      @include grid-row();
+
+      h3 {
+        color: $dark-maroon;
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      a {
+        text-align: center;
+        text-decoration: none;
+
+        article {
+
+          h4 {
+            color: $black;
+            font-size: 3rem;
+            margin: 0;
+          }
+
+          h5 {
+            color: $gray;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: rem-calc(15) 0;
+          }
+
+          img {
+            height: auto;
+            width: rem-calc(275);
+            margin-bottom: rem-calc(-5);
+
+            @media #{$medium-up} {
+              height: auto;
+              width: rem-calc(500);
+            }
+          }
+        }
+      }
+    }
+  }
+}

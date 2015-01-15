@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+.recent{
+text-align: center;
+ font-family: 'Arvo', serif;
+}
+table{
+border: 2px solid black;
+width: 100%;
+    text-align: center;
+}
+th{
+background: maroon;
+color: white;
+text-align: center;
+height: 40px; 
+}
+.com{
+height: 70px;
+}
+strong{
+color: maroon;
+}
+tr:hover{
+background-color: #CCCCB2
+;
+}
+a:hover{
+color: red;
+}
+.date{
+height: 30px;
+text-align: left;
+
+background-color: #CCCCB2;
+}
+.date:hover{
+background-color: #CCCCB2;
+}
+.user{
+background-color: white;
+text-align: left;
+    display: block;
+  padding-left: 20px;
+}
+.user:hover{
+background-color: white;
+}
+.entry{
+background-color: white;
+    text-align: left;
+}
+.entry:hover{
+background-color: white;
+}
+.author{
+  width: 350px;
+}
+.post{
+widows: 100%
+}
+h5{
+padding-left: 20px;
+}

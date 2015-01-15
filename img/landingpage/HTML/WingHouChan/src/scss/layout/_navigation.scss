@@ -1,0 +1,149 @@
+// Navigation
+// _navigation.scss
+
+// Global styles for the navigation menu
+
+@import "../utils/config";
+@import "../utils/functions";
+@import "../utils/media-queries";
+@import "../utils/mixins";
+@import "grid";
+@import "../components/buttons";
+
+nav.global {
+  background-color: rgba(26,26,26,.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: -100%;
+  transition: right 1s ease;
+  z-index: 9999;
+
+  @media #{$medium-up} {
+    padding: rem-calc(50) rem-calc(10);
+  }
+
+  > div {
+    @include grid-row();
+    position: relative;
+
+    .menu-toggle {
+      font-size: 3rem;
+      position: absolute;
+      top: rem-calc(10);
+      right: rem-calc(10);
+    }
+
+    > div {
+      @include grid-column(12);
+
+      @media #{$medium-up} {
+        @include grid-column(6);
+      }
+    }
+
+    #main-links {
+
+      ul {
+        list-style-type: none;
+
+        li {
+
+          a {
+            font-family: "Oswald";
+            font-size: 10vw;
+            font-variant: all-small-caps;
+
+            @media #{$medium-up} {
+              font-size: 3.5rem;
+            }
+
+            &:hover {
+              color: $white;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .download {
+        @include round-button(
+          $background-color: $maroon,
+          $background-color-hover: $dark-maroon,
+          $text-color: $white);
+        display: none;
+        font-family: "Oswald";
+        font-size: 2rem;
+        text-align: center;
+        margin-left: rem-calc(40);
+        line-height: rem-calc(60);
+        height: rem-calc(75);
+        width: rem-calc(250);
+
+        @media #{$medium-up} {
+          display: block;
+        }
+
+        i {
+          font-size: 2rem;
+          margin-right: rem-calc(15);
+          position: relative;
+          top: rem-calc(4);
+        }
+      }
+    }
+
+    #nav-search {
+
+      form {
+        padding: 0 rem-calc(40);
+
+        input {
+
+          &[type="text"] {
+            background-color: transparent;
+            border: 2px solid $maroon;
+            display: block;
+            color: $gray;
+            font-size: 1.25rem;
+            padding: rem-calc(10) rem-calc(20);
+            box-shadow: none;
+            outline: none;
+            width: 100%;
+
+            @media #{$medium-up} {
+              font-size: 2rem;
+              margin-top: rem-calc(110);
+            }
+
+            &:focus {
+              border: 2px solid $gray;
+            }
+
+            &:valid {
+              border: 2px solid $white;
+              color: $white;
+            }
+          }
+
+          &[type="submit"] {
+            @include round-button(
+              $background-color: $maroon,
+              $background-color-hover: $dark-maroon,
+              $text-color: $white);
+            border: none;
+            float: right;
+            margin: rem-calc(10) 0;
+            font-family: "Oswald";
+            font-size: 1.5rem;
+            width: 100%;
+
+            @media #{$medium-up} {
+              width: auto;  
+            }
+          }
+        }
+      }
+    }
+  }
+}

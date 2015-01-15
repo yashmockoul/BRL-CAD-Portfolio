@@ -1,0 +1,56 @@
+// Typography
+// _typography.scss
+
+// Global styling for typography
+
+@import "../utils/config";
+@import "../utils/mixins";
+
+
+// Logo Typography
+// Control typographic styling for the logo
+$logo-font-family: "Oswald" !important;
+
+// Body Typography
+// Control typographic styling for body text
+$body-sans-serif: "Open Sans", sans-serif;
+
+$body-color: $black;
+
+// Heading Typography
+// Control typographic styling for headings
+$heading-sans-serif: "Open Sans", sans-serif;
+
+$heading-weight: 600;
+
+// Anchor Typography
+// Control typographic styling for anchors
+$anchor-color: $maroon;
+$anchor-text-decoration: none;
+
+$anchor-hover-color: $dark-maroon;
+$anchor-hover-text-decoration: underline;
+
+@include exports("typography") {
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-sans-serif;
+    font-weight: $heading-weight;
+  }
+
+  a {
+    color: $anchor-color;
+    text-decoration: $anchor-text-decoration;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $anchor-hover-color;
+      text-decoration: $anchor-hover-text-decoration;
+    }
+  }
+
+  body {
+    color: $body-color;
+    font-family: $body-sans-serif;
+  }
+}

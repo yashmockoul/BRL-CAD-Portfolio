@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+.gal{
+width: 350px;
+height: 350px;
+border: 2px black solid;
+
+}
+.col-lg-4{
+
+}
+#gal1{
+background-image: url('../img/leqha8qaqwyjh9p9wx0k_400x400.jpeg');
+}
+#gal2{
+background-image: url('../img/panoramic_photo_oneshot.jpg');
+}
+#gal3{
+background-image: url('../img/miami-balloon-rides-photos-12.jpg');
+}
+.name{
+background-color: black;
+color: white;
+text-align: center;
+padding: 5px 5px 5px 5px;
+}
+h2{
+font-family: 'Arvo', serif;
+}
+
+.grid-gallery{
+margin-top: 76px;
+}

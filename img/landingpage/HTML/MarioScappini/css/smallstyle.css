@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+#navbar{
+display: inline-block;
+list-style: none;
+width: 100%;
+height: 75px;
+}
+#nav{
+padding-left: 0px;
+}
+.col-lg-12{
+padding: 0px 0px 0px 0px;
+}
+
+a{
+   
+ color:black;
+    text-decoration: none;
+}a:hover{ 
+color:#DB5272;
+text-decoration: none;
+}
+#jum{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+
+}   
+#title{
+font-family: 'Arvo', serif;
+    text-align: center;
+    color: black;
+    font-size: 100px;
+    margin-top: -20px;
+}
+#desc{
+    color: #DB5272;
+    text-align: center;
+    font-family: 'Arvo', serif;
+}
+
+
+li{
+    
+display: inline-block;
+margin-left: 40px;
+border-bottom: transparent 2px solid;
+
+}
+
+.right{
+float: right;
+    display: inline;
+    margin-right: 300px;
+}
+.left{
+float: left;
+    margin-left: 100px
+}
+
+
+#sites{
+text-align: center;
+background-color: white;
+width: 100%;
+color: black;
+opacity: 0.9;
+z-index: 99;
+    
+}
+h3{
+ font-family: 'Arvo', serif;
+    font-size: 20px;
+}
+.atitle{
+font-family: 'Arvo', serif;
+    text-align: center;
+}
+#log{
+margin-top: 100px;
+
+}
+.form-control{
+width: 250px;
+
+}
+.topbtn{
+border-bottom: none;
+}
+
+.logbtn{
+display: block;
+width: 100%;
+height: 50px;
+    background-color: maroon;
+    border: none;
+}
+.footer{
+    
+margin-top: 200px;
+background-color: black;
+    color: white;
+    height: 150px;
+    text-align: center;
+    padding-top: 20px;
+}
+h4{
+ font-family: 'Arvo', serif;
+}
+h5{
+ font-family: 'Arvo', serif;
+}
+.media{
+
+text-align: center;
+}
+.more{
+text-align: center;
+margin-top: 50px;
+}
+.active{
+color: red;
+}
+#logo{
+    margin-top: 10px;
+    height:400px; width:400px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    
+}
+#gre{
+left:30px;
+position: absolute;
+margin-left: 10px;
+margin-top: 30px;
+}
+    
+

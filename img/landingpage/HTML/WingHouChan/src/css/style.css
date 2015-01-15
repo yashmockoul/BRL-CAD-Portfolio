@@ -1,0 +1,1365 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+* 1. Set default font family to sans-serif.
+* 2. Prevent iOS text size adjust after orientation change, without disabling
+* user zoom.
+*/
+/* line 7, ../scss/base/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+* Remove default margin.
+*/
+/* line 15, ../scss/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+========================================================================== */
+/**
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
+/* line 25, ../scss/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+/* line 43, ../scss/base/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+/* line 54, ../scss/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+* Address `[hidden]` styling not present in IE 8/9/10.
+* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+*/
+/* line 62, ../scss/base/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+/* line 71, ../scss/base/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+/* line 77, ../scss/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+========================================================================== */
+/**
+* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+/* line 86, ../scss/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
+/* line 92, ../scss/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+* Address styling not present in Safari and Chrome.
+*/
+/* line 99, ../scss/base/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari, and Chrome.
+*/
+/* line 106, ../scss/base/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+* Address styling not present in IE 8/9.
+*/
+/* line 113, ../scss/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+/* line 120, ../scss/base/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+/* line 126, ../scss/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 133, ../scss/base/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 136, ../scss/base/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9/10.
+*/
+/* line 144, ../scss/base/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+* Correct overflow not hidden in IE 9/10/11.
+*/
+/* line 150, ../scss/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari.
+*/
+/* line 158, ../scss/base/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+/* line 164, ../scss/base/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+* Contain overflow in all browsers.
+*/
+/* line 172, ../scss/base/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+/* line 178, ../scss/base/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+* Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+*/
+/* line 197, ../scss/base/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10/11.
+*/
+/* line 209, ../scss/base/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
+/* line 218, ../scss/base/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+* and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+* `input` and others.
+*/
+/* line 229, ../scss/base/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+/* line 239, ../scss/base/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+/* line 246, ../scss/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+/* line 255, ../scss/base/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+/* line 265, ../scss/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+/* line 275, ../scss/base/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+* (include `-moz` to future-proof).
+*/
+/* line 284, ../scss/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+/* line 295, ../scss/base/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+* Define consistent border, margin, and padding.
+*/
+/* line 302, ../scss/base/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9/10/11.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+/* line 311, ../scss/base/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+/* line 318, ../scss/base/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+/* line 325, ../scss/base/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+/* line 333, ../scss/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 337, ../scss/base/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 39, ../scss/utils/_config.scss */
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, ../scss/utils/_mixins.scss */
+*::before, *::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+*::after {
+  clear: both;
+}
+
+/* line 49, ../scss/utils/_config.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 54, ../scss/utils/_config.scss */
+body {
+  background-color: #f2f2f2;
+}
+
+/* line 36, ../scss/components/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+/* line 41, ../scss/components/_typography.scss */
+a {
+  color: #c9435e;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+/* line 46, ../scss/components/_typography.scss */
+a:hover {
+  color: #b32c44;
+  text-decoration: underline;
+}
+
+/* line 52, ../scss/components/_typography.scss */
+body {
+  color: #1a1a1a;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 13, ../scss/layout/_header.scss */
+header.global {
+  background-color: rgba(26, 26, 26, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 9998;
+}
+/* line 19, ../scss/layout/_header.scss */
+header.global > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  padding: 0 1.25rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+header.global > div::before, header.global > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+header.global > div::after {
+  clear: both;
+}
+/* line 23, ../scss/layout/_header.scss */
+header.global > div img {
+  height: 4.375rem;
+  width: auto;
+}
+/* line 30, ../scss/layout/_header.scss */
+header.global > div a.menu-toggle {
+  float: right;
+  font-family: "Oswald";
+  font-size: 1.25rem;
+  text-decoration: none;
+  margin-top: 1.5625rem;
+}
+/* line 37, ../scss/layout/_header.scss */
+header.global > div a.menu-toggle i {
+  margin-left: 0.3125rem;
+}
+
+/* line 13, ../scss/layout/_navigation.scss */
+nav.global {
+  background-color: rgba(26, 26, 26, 0.9);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: -100%;
+  transition: right 1s ease;
+  z-index: 9999;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 13, ../scss/layout/_navigation.scss */
+  nav.global {
+    padding: 3.125rem 0.625rem;
+  }
+}
+/* line 26, ../scss/layout/_navigation.scss */
+nav.global > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  position: relative;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+nav.global > div::before, nav.global > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+nav.global > div::after {
+  clear: both;
+}
+/* line 30, ../scss/layout/_navigation.scss */
+nav.global > div .menu-toggle {
+  font-size: 3rem;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+}
+/* line 37, ../scss/layout/_navigation.scss */
+nav.global > div > div {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 37, ../scss/layout/_navigation.scss */
+  nav.global > div > div {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+  }
+}
+/* line 47, ../scss/layout/_navigation.scss */
+nav.global > div #main-links ul {
+  list-style-type: none;
+}
+/* line 52, ../scss/layout/_navigation.scss */
+nav.global > div #main-links ul li a {
+  font-family: "Oswald";
+  font-size: 10vw;
+  font-variant: all-small-caps;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 52, ../scss/layout/_navigation.scss */
+  nav.global > div #main-links ul li a {
+    font-size: 3.5rem;
+  }
+}
+/* line 61, ../scss/layout/_navigation.scss */
+nav.global > div #main-links ul li a:hover {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+/* line 69, ../scss/layout/_navigation.scss */
+nav.global > div #main-links .download {
+  display: inline-block;
+  background-color: #c9435e;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  height: auto;
+  width: auto;
+  padding: 0.4375rem 1.875rem;
+  transition: background-color .5s ease;
+  display: none;
+  font-family: "Oswald";
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 2.5rem;
+  line-height: 3.75rem;
+  height: 4.6875rem;
+  width: 15.625rem;
+}
+/* line 53, ../scss/components/_buttons.scss */
+nav.global > div #main-links .download:hover {
+  color: #f2f2f2;
+  background-color: #b32c44;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 69, ../scss/layout/_navigation.scss */
+  nav.global > div #main-links .download {
+    display: block;
+  }
+}
+/* line 87, ../scss/layout/_navigation.scss */
+nav.global > div #main-links .download i {
+  font-size: 2rem;
+  margin-right: 0.9375rem;
+  position: relative;
+  top: 0.25rem;
+}
+/* line 98, ../scss/layout/_navigation.scss */
+nav.global > div #nav-search form {
+  padding: 0 2.5rem;
+}
+/* line 103, ../scss/layout/_navigation.scss */
+nav.global > div #nav-search form input[type="text"] {
+  background-color: transparent;
+  border: 2px solid #c9435e;
+  display: block;
+  color: #4d4d4d;
+  font-size: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 103, ../scss/layout/_navigation.scss */
+  nav.global > div #nav-search form input[type="text"] {
+    font-size: 2rem;
+    margin-top: 6.875rem;
+  }
+}
+/* line 119, ../scss/layout/_navigation.scss */
+nav.global > div #nav-search form input[type="text"]:focus {
+  border: 2px solid #4d4d4d;
+}
+/* line 123, ../scss/layout/_navigation.scss */
+nav.global > div #nav-search form input[type="text"]:valid {
+  border: 2px solid #f2f2f2;
+  color: #f2f2f2;
+}
+/* line 129, ../scss/layout/_navigation.scss */
+nav.global > div #nav-search form input[type="submit"] {
+  display: inline-block;
+  background-color: #c9435e;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  height: auto;
+  width: auto;
+  padding: 0.4375rem 1.875rem;
+  transition: background-color .5s ease;
+  border: none;
+  float: right;
+  margin: 0.625rem 0;
+  font-family: "Oswald";
+  font-size: 1.5rem;
+  width: 100%;
+}
+/* line 53, ../scss/components/_buttons.scss */
+nav.global > div #nav-search form input[type="submit"]:hover {
+  color: #f2f2f2;
+  background-color: #b32c44;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 129, ../scss/layout/_navigation.scss */
+  nav.global > div #nav-search form input[type="submit"] {
+    width: auto;
+  }
+}
+
+/* line 13, ../scss/layout/_footer.scss */
+footer.global {
+  width: 100%;
+}
+/* line 16, ../scss/layout/_footer.scss */
+footer.global #footer-top {
+  background-color: #333;
+  padding: 1.25rem 0;
+  width: 100%;
+}
+/* line 21, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+footer.global #footer-top #footer-links::before, footer.global #footer-top #footer-links::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+footer.global #footer-top #footer-links::after {
+  clear: both;
+}
+/* line 24, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+footer.global #footer-top #footer-links > div::before, footer.global #footer-top #footer-links > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+footer.global #footer-top #footer-links > div::after {
+  clear: both;
+}
+/* line 27, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:first-of-type {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 27, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:first-of-type {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 35, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:first-of-type a {
+    display: inline-block;
+  }
+}
+/* line 41, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:first-of-type a:first-of-type {
+  position: relative;
+  top: 0.3125rem;
+}
+/* line 46, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:first-of-type a:last-of-type {
+  font-size: 2rem;
+  font-family: "Oswald";
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 46, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:first-of-type a:last-of-type {
+    position: relative;
+    top: -0.9375rem;
+    left: 0.625rem;
+  }
+}
+/* line 56, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:first-of-type a:last-of-type:hover {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+/* line 64, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:last-of-type {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 64, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:last-of-type {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: left;
+  }
+}
+/* line 71, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:last-of-type ul {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  top: 0.625rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 71, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:last-of-type ul {
+    float: right;
+  }
+}
+/* line 81, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:last-of-type ul li {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 81, ../scss/layout/_footer.scss */
+  footer.global #footer-top #footer-links > div > div:last-of-type ul li {
+    float: left;
+    margin: 0 0.625rem;
+    text-align: left;
+  }
+}
+/* line 92, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:last-of-type ul li a {
+  color: #db5272;
+  text-decoration: none;
+}
+/* line 96, ../scss/layout/_footer.scss */
+footer.global #footer-top #footer-links > div > div:last-of-type ul li a:hover {
+  color: #f2f2f2;
+}
+/* line 107, ../scss/layout/_footer.scss */
+footer.global #footer-bottom {
+  background-color: #1a1a1a;
+  width: 100%;
+}
+/* line 111, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+footer.global #footer-bottom > div::before, footer.global #footer-bottom > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+footer.global #footer-bottom > div::after {
+  clear: both;
+}
+/* line 114, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:first-of-type {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 114, ../scss/layout/_footer.scss */
+  footer.global #footer-bottom > div > div:first-of-type {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 41.66667%;
+    left: 58.33333%;
+    right: auto;
+    float: left;
+  }
+}
+/* line 121, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:first-of-type ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 121, ../scss/layout/_footer.scss */
+  footer.global #footer-bottom > div > div:first-of-type ul {
+    float: right;
+    margin-top: 0.875rem;
+  }
+}
+/* line 131, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:first-of-type ul li {
+  font-size: 0.8125rem;
+  text-align: center;
+  margin: 0 0.625rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 131, ../scss/layout/_footer.scss */
+  footer.global #footer-bottom > div > div:first-of-type ul li {
+    float: left;
+    text-align: left;
+  }
+}
+/* line 141, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:first-of-type ul li a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+/* line 145, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:first-of-type ul li a:hover {
+  color: #f2f2f2;
+}
+/* line 153, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:last-of-type {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 153, ../scss/layout/_footer.scss */
+  footer.global #footer-bottom > div > div:last-of-type {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 58.33333%;
+    right: 41.66667%;
+    left: auto;
+    float: left;
+  }
+}
+/* line 160, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:last-of-type p {
+  color: #4d4d4d;
+  font-size: 0.8125rem;
+  text-align: center;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 160, ../scss/layout/_footer.scss */
+  footer.global #footer-bottom > div > div:last-of-type p {
+    text-align: left;
+  }
+}
+/* line 169, ../scss/layout/_footer.scss */
+footer.global #footer-bottom > div > div:last-of-type p a {
+  display: inline-block;
+}
+
+/* line 11, ../scss/pages/_landing.scss */
+#index #landing {
+  background-color: #1a1a1a;
+  position: relative;
+  min-height: 40em;
+  height: calc(100% + 275px);
+  width: 100%;
+}
+@media only screen and (min-width: 53em) {
+  /* line 11, ../scss/pages/_landing.scss */
+  #index #landing {
+    height: 100%;
+  }
+}
+/* line 25, ../scss/pages/_landing.scss */
+#index #landing > div:first-of-type {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  padding: 0 0.625rem;
+  position: relative;
+  top: 10%;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+#index #landing > div:first-of-type::before, #index #landing > div:first-of-type::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+#index #landing > div:first-of-type::after {
+  clear: both;
+}
+@media only screen and (min-width: 53em) {
+  /* line 25, ../scss/pages/_landing.scss */
+  #index #landing > div:first-of-type {
+    top: 30%;
+  }
+}
+/* line 35, ../scss/pages/_landing.scss */
+#index #landing > div:first-of-type h1 {
+  color: #c9435e;
+  font-family: "Oswald";
+  font-size: 17.5vw;
+  margin: 0;
+}
+@media only screen and (min-width: 53em) {
+  /* line 35, ../scss/pages/_landing.scss */
+  #index #landing > div:first-of-type h1 {
+    font-size: 7rem;
+  }
+}
+/* line 46, ../scss/pages/_landing.scss */
+#index #landing > div:first-of-type h2 {
+  color: #f2f2f2;
+  font-weight: 300;
+  font-size: 7.5vw;
+  margin: 0;
+}
+@media only screen and (min-width: 53em) {
+  /* line 46, ../scss/pages/_landing.scss */
+  #index #landing > div:first-of-type h2 {
+    font-size: 3rem;
+  }
+}
+/* line 58, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar {
+  background-color: #db5272;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 17.1875rem;
+  width: 100%;
+}
+@media only screen and (min-width: 53em) {
+  /* line 58, ../scss/pages/_landing.scss */
+  #index #landing #quick-action-bar {
+    max-height: 4.6875rem;
+  }
+}
+/* line 72, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  padding: 0 1.25rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+#index #landing #quick-action-bar > div::before, #index #landing #quick-action-bar > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+#index #landing #quick-action-bar > div::after {
+  clear: both;
+}
+/* line 76, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar > div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+@media only screen and (min-width: 53em) {
+  /* line 82, ../scss/pages/_landing.scss */
+  #index #landing #quick-action-bar > div ul li {
+    float: left;
+  }
+  /* line 87, ../scss/pages/_landing.scss */
+  #index #landing #quick-action-bar > div ul li:nth-of-type(2), #index #landing #quick-action-bar > div ul li:last-of-type {
+    float: right;
+  }
+}
+/* line 92, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar > div ul li p {
+  font-size: 1.25rem;
+  margin-top: 1.5625rem;
+}
+@media only screen and (min-width: 53em) {
+  /* line 92, ../scss/pages/_landing.scss */
+  #index #landing #quick-action-bar > div ul li p {
+    float: left;
+  }
+}
+/* line 101, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar > div ul li a {
+  display: inline-block;
+  background-color: transparent;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  height: auto;
+  width: 13.125rem;
+  padding: 0.4375rem 1.875rem;
+  transition: background-color .5s ease;
+  border: 2px solid #f2f2f2;
+  font-family: "Oswald";
+  margin: 0.625rem 0.625rem;
+}
+/* line 53, ../scss/components/_buttons.scss */
+#index #landing #quick-action-bar > div ul li a:hover {
+  color: #c9435e;
+  background-color: #f2f2f2;
+}
+@media only screen and (min-width: 53em) {
+  /* line 101, ../scss/pages/_landing.scss */
+  #index #landing #quick-action-bar > div ul li a {
+    float: right;
+  }
+}
+/* line 116, ../scss/pages/_landing.scss */
+#index #landing #quick-action-bar > div ul li a i {
+  margin-right: 0.9375rem;
+  position: relative;
+  top: 0.125rem;
+}
+/* line 128, ../scss/pages/_landing.scss */
+#index #features, #index #oss, #index #est {
+  background-color: #1a1a1a;
+  height: auto;
+  width: 100%;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 128, ../scss/pages/_landing.scss */
+  #index #features, #index #oss, #index #est {
+    min-height: 43.75em;
+    height: 100%;
+  }
+}
+/* line 138, ../scss/pages/_landing.scss */
+#index #features > div, #index #oss > div, #index #est > div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  height: 100%;
+  position: relative;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+#index #features > div::before, #index #features > div::after, #index #oss > div::before, #index #oss > div::after, #index #est > div::before, #index #est > div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+#index #features > div::after, #index #oss > div::after, #index #est > div::after {
+  clear: both;
+}
+/* line 143, ../scss/pages/_landing.scss */
+#index #features > div .content-panel, #index #oss > div .content-panel, #index #est > div .content-panel {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  background-color: #f2f2f2;
+  padding: 1.25rem 1.875rem;
+  height: auto;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 143, ../scss/pages/_landing.scss */
+  #index #features > div .content-panel, #index #oss > div .content-panel, #index #est > div .content-panel {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 50%;
+    float: left;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    padding: 1.875rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 143, ../scss/pages/_landing.scss */
+  #index #features > div .content-panel, #index #oss > div .content-panel, #index #est > div .content-panel {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 41.66667%;
+    float: left;
+    padding: 3.125rem 1.875rem;
+  }
+}
+/* line 162, ../scss/pages/_landing.scss */
+#index #features > div .content-panel h2, #index #oss > div .content-panel h2, #index #est > div .content-panel h2 {
+  color: #c9435e;
+  font-size: 10svw;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 162, ../scss/pages/_landing.scss */
+  #index #features > div .content-panel h2, #index #oss > div .content-panel h2, #index #est > div .content-panel h2 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+}
+/* line 174, ../scss/pages/_landing.scss */
+#index #features > div .content-panel h3, #index #oss > div .content-panel h3, #index #est > div .content-panel h3 {
+  color: #4d4d4d;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+/* line 180, ../scss/pages/_landing.scss */
+#index #features > div .content-panel a, #index #oss > div .content-panel a, #index #est > div .content-panel a {
+  display: inline-block;
+  background-color: #c9435e;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  height: auto;
+  width: auto;
+  padding: 0.4375rem 1.875rem;
+  transition: background-color .5s ease;
+  font-size: 1.5rem;
+  font-family: "Oswald";
+}
+/* line 53, ../scss/components/_buttons.scss */
+#index #features > div .content-panel a:hover, #index #oss > div .content-panel a:hover, #index #est > div .content-panel a:hover {
+  color: #f2f2f2;
+  background-color: #b32c44;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 195, ../scss/pages/_landing.scss */
+  #index #oss .content-panel {
+    text-align: right;
+    right: 0;
+  }
+}
+/* line 204, ../scss/pages/_landing.scss */
+#index #cta {
+  padding: 6.25rem 0;
+}
+/* line 207, ../scss/pages/_landing.scss */
+#index #cta div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+#index #cta div::before, #index #cta div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+#index #cta div::after {
+  clear: both;
+}
+/* line 210, ../scss/pages/_landing.scss */
+#index #cta div a {
+  display: inline-block;
+  background-color: #c9435e;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.625rem;
+  height: auto;
+  width: auto;
+  padding: 0.4375rem 1.875rem;
+  transition: background-color .5s ease;
+  display: block;
+  font-family: "Oswald";
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 3.75rem;
+  height: 4.6875rem;
+  width: 15.625rem;
+}
+/* line 53, ../scss/components/_buttons.scss */
+#index #cta div a:hover {
+  color: #f2f2f2;
+  background-color: #b32c44;
+}
+/* line 224, ../scss/pages/_landing.scss */
+#index #cta div a i {
+  font-size: 2rem;
+  margin-right: 0.9375rem;
+  position: relative;
+  top: 0.25rem;
+}
+/* line 232, ../scss/pages/_landing.scss */
+#index #cta div p {
+  color: #4d4d4d;
+  font-size: 0.9375rem;
+  text-align: center;
+}
+/* line 242, ../scss/pages/_landing.scss */
+#index #blog div {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+}
+/* line 25, ../scss/utils/_mixins.scss */
+#index #blog div::before, #index #blog div::after {
+  content: " ";
+  display: table;
+}
+/* line 28, ../scss/utils/_mixins.scss */
+#index #blog div::after {
+  clear: both;
+}
+/* line 245, ../scss/pages/_landing.scss */
+#index #blog div h3 {
+  color: #b32c44;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+}
+/* line 253, ../scss/pages/_landing.scss */
+#index #blog div a {
+  text-align: center;
+  text-decoration: none;
+}
+/* line 259, ../scss/pages/_landing.scss */
+#index #blog div a article h4 {
+  color: #1a1a1a;
+  font-size: 3rem;
+  margin: 0;
+}
+/* line 265, ../scss/pages/_landing.scss */
+#index #blog div a article h5 {
+  color: #4d4d4d;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.9375rem 0;
+}
+/* line 272, ../scss/pages/_landing.scss */
+#index #blog div a article img {
+  height: auto;
+  width: 17.1875rem;
+  margin-bottom: -0.3125rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 272, ../scss/pages/_landing.scss */
+  #index #blog div a article img {
+    height: auto;
+    width: 31.25rem;
+  }
+}

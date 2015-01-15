@@ -1,0 +1,68 @@
+// Buttons
+// _buttons.scss
+
+// Sass file for styling buttons
+
+@import "../utils/config";
+@import "../utils/functions";
+
+// Solid round button mixin
+// Mixin for creating buttons with rounded corners
+//
+// Config
+//   $background-color: Color of the button background
+//     Type: Color, Keyword
+//     Required: Yes
+//   $background-color-hover: Color of the button background on hover
+//     Type: Color, Keyword
+//     Required: Yes
+//   $text-color: Color of button text
+//     Type: Color, Keyword
+//     Required: Yes
+//   $text-color-hover: Color of button text on hover
+//     Type: Color, Keyword
+//     Default: $text-color
+//     Required: No
+//   $border-color: Color of border
+//     Type: Color, Keyword
+//     Default: None
+//       Behaviour: No border will appear
+//     Required: No
+//   $height: Specify height of button in pixels
+//     Type: Integer
+//     Default: auto
+//     Required: No
+//   $width: Specify width of button in pixels
+//     Type: Integer
+//     Default: auto
+//     Required: No
+//
+@mixin round-button(
+  $background-color,
+  $background-color-hover,
+  $text-color,
+  $text-color-hover: $text-color,
+  $border-color: none,
+  $height: auto,
+  $width: auto) {
+
+  display: inline-block;
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  text-decoration: none;
+  border-radius: rem-calc(10);
+  height: $height;
+  width: $width;
+  padding: rem-calc(7) rem-calc(30);
+  transition: background-color .5s ease;
+
+  @if $border-color != none {
+    border: 2px solid $border-color;
+  }
+
+  &:hover {
+    color: $text-color-hover;
+    background-color: $background-color-hover;
+  }
+}
