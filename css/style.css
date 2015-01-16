@@ -409,12 +409,6 @@ ul.portfolio li {
 	display: none;
 	opacity: 0;
 }
-ul.portfolio2 li {
-	width: 20%;
-	float: left;
-	display: none;
-	opacity: 0;
-}
 .portfolioitem {
 	display: block;
 	padding-bottom: 85px;
@@ -441,6 +435,25 @@ div.portfoliopad {
 }
 .portfolioitem2 img {
 	width: 99%;
+	margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+.favicon1 {
+	display: block;
+	padding-bottom: 85px;
+	position: relative;
+	height: 175px;
+}
+div.favicon1a {
+	position: absolute;
+	top: 0;
+	height: 150px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+}
+.favicon1 img {
 	margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
